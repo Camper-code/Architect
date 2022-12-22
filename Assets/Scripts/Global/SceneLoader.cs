@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Injection;
 using Architect;
 
 [ParentModule("Global")]
@@ -13,9 +12,7 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
-        Injection.Injector.AddToBase(manager);
-
-        Injection.Injector.Inject(user);
-        Injection.Injector.Inject(enemy);
+        user.manager = manager;
+        enemy.manager = manager;
     }
 }

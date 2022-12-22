@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Injection;
 using Architect;
 
 [ParentModule("Entity")]
-public class Enemy : MonoBehaviour, IAutoInjectObject
+public class Enemy : MonoBehaviour
 {
-    [Inject] private Manager manager;
+    public Manager manager;
 
     public Weapon gun;
 
