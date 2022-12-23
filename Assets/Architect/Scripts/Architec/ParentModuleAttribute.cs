@@ -1,12 +1,15 @@
 using System;
 
-[AttributeUsage(AttributeTargets.Class)]
-public class ParentModuleAttribute : Attribute
+namespace Architect
 {
-    public string moduleName;
-
-    public ParentModuleAttribute(string moduleName)
+    [AttributeUsage(AttributeTargets.Class)]
+    public class ParentModuleAttribute : Attribute
     {
-        this.moduleName = moduleName;
+        public string moduleName;
+
+        public ParentModuleAttribute(string moduleName)
+        {
+            this.moduleName = moduleName;
+        }
     }
 }
